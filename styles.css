@@ -1,0 +1,73 @@
+/* Basic styling and theme toggle */
+:root {
+  --bg-color: #333;
+  --text-color: #fff;
+  --button-color: rgb(229, 212, 212);
+  --button-hover-color: #ddd;
+}
+
+body.light-theme {
+  --bg-color: #f10f0f;
+  --text-color: rgb(209, 59, 59);
+  --button-color: #444;
+  --button-hover-color: rgb(3, 1, 1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.calculator {
+  width: 340px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.display {
+  background-color: rgb(219, 173, 173);
+  color: var(--text-color);
+  text-align: right;
+  padding: 20px;
+  font-size: 32px;
+  height: 80px;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 206px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+button {
+  padding: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
